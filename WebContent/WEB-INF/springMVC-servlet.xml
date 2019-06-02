@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+
+	<!-- 上下文 组件扫描 -->
+	<context:component-scan
+		base-package="cn.mcandroid.service">
+	</context:component-scan>
+	<context:component-scan
+		base-package="cn.mcandroid.controller">
+	</context:component-scan>
+
+
+	<!-- 内部资源视图解析器 前缀 + 逻辑名 + 后缀 -->
+	<!-- 此处的设置的视图解析器 将与控制器 中的 逻辑名进行拼接 -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<!-- 设置前缀 -->
+		<property name="prefix" value="/WEB-INF/jsp/" />
+
+		<!-- 设置后缀 -->
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+
+
+
+
+
+    <mvc:resources location="/static_file/" mapping="/static_file/**" /> 
+<!-- 允许通静态文件 -->
+	<mvc:default-servlet-handler/>
+
+
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<ref bean="stringHttpMessageConverter" />
+			<ref bean="mappingGsonHttpMessageConverter" />
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<bean id="stringHttpMessageConverter"
+		class="org.springframework.http.converter.StringHttpMessageConverter" />
+
+	<bean id="mappingGsonHttpMessageConverter"
+		class="org.springframework.http.converter.json.GsonHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+</beans>

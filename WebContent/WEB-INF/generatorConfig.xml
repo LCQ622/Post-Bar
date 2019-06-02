@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="context1">
+		<jdbcConnection
+			connectionURL="jdbc:mysql://127.0.0.1:3306/bbs?useUnicode=true&amp;characterEncoding=utf-8"
+			driverClass="com.mysql.jdbc.Driver" password="root" userId="root" />
+		<javaModelGenerator
+			targetPackage="cn.mcandroid.pojo" targetProject="BBS" />
+		<sqlMapGenerator targetPackage="cn.mcandroid.mapping"
+			targetProject="BBS" />
+		<javaClientGenerator
+			targetPackage="cn.mcandroid.dao" targetProject="BBS" type="XMLMAPPER" />
+			
+		<!-- 用户表 -->
+		<table schema="" tableName="user">
+		      <generatedKey column="user_id" sqlStatement="MySql"/>
+		</table>
+		
+		<!-- 帖子表 -->
+		<table schema="" tableName="thematic_content">
+		   <generatedKey column="content_id" sqlStatement="MySql"/>
+		
+		</table>
+
+		<!--  吧表 -->
+		<table schema="" tableName="thematic_column">
+		  <generatedKey column="column_id" sqlStatement="MySql"/>
+			
+		</table>
+
+
+
+		<!-- 回复表 -->
+		<table schema="" tableName="replies">
+		  <generatedKey column="replies_id" sqlStatement="MySql"/>
+			
+		</table>
+
+
+
+		<!-- 吧管理员表 -->
+		<table schema="" tableName="manager">
+		  <generatedKey column="manager_id" sqlStatement="MySql"/>
+			
+		</table>
+
+
+
+		<!-- 收藏表 -->
+		<table schema="" tableName="collection">
+		  <generatedKey column="collection_id" sqlStatement="MySql"/>
+			
+		</table>
+
+	</context>
+</generatorConfiguration>

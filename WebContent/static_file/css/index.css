@@ -1,0 +1,84 @@
+
+/*头部*/
+#top {
+	width:100%;
+	height: 50px;
+	background: #393D49;
+	position: fixed; 
+	top:0;
+}
+
+#top>span {
+	color: #F0F0F0;
+	font-size: 20px;
+	margin-left:20px;
+	position: absolute;
+	top: 12px;
+}
+
+#logo {
+	color: #F0F0F0;
+	line-height: 50px;
+	margin-left: 30px;
+	font-size: 40px;
+}
+
+.alink{
+	float:right;
+	color: #F0F0F0;
+	font-size: 15px;
+	line-height: 50px;
+	margin-right: 20px;
+}
+
+
+
+
+
+
+/*主体内容*/
+#content {
+	margin-top:50px;
+	height: 640px;
+}
+
+.item{
+	width: 300px;
+	height: 200px;
+	background: white;
+	float: left;
+	margin: 20px 30px;
+	border-radius: 15px;
+	/* position: relative; */
+}
+.item_title{
+	margin-left:15px;
+	margin-top:5px;
+	font-size:25px;
+}
+.item_msg{
+	margin-left:15px;
+	margin-top:15px;
+	font-size: 15px;
+}
+.item_date{
+	font-size:10px;
+	margin-left:190px;
+	margin-top:90px;
+}
+
+
+/*页脚*/
+#footer{
+	}
+#footer>hr {
+	background: #a1a3a3;
+
+	/*margin-top: 650px;*/
+}
+
+#footer>div {
+	width: 154px;
+	margin: 0 auto;
+	margin-top: 25px;
+}

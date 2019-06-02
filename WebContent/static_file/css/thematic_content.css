@@ -1,0 +1,108 @@
+#mbx{
+	
+	color: #F0F0F0;
+	font-size: 20px;
+	margin-left:20px;
+	position: absolute;
+	top: 12px;
+
+}
+
+
+
+
+.alink {
+    float: right;
+    color: #F0F0F0;
+    font-size: 15px;
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+
+
+
+#content{
+/* height: 600px; */
+padding: 20px;
+}
+
+.con{
+	width:100%;
+	height: 100px;
+	background: white;
+	margin: 20px 0px;
+	border-radius: 10px;
+}
+.con_title{
+	margin-left:15px;
+	margin-top:5px;
+	font-size:25px;
+}
+
+.con_username{
+	font-size:10px;
+	float:right;
+	margin-right: 20px;
+	margin-top: -20px;
+}
+.con_msg{
+	margin-left:15px;
+	margin-top:15px;
+	font-size: 15px;
+}
+.con_date{
+	
+	font-size:10px;
+	float:right;
+	margin-right: 20px;
+	margin-top: -12px;
+}
+
+
+
+
+
+
+
+.item{
+	width:80%;
+	background: white;
+	margin: 10px auto;
+	border-radius: 10px;
+	border: 1px solid #d2d2d2;
+}
+.item_msg{
+	margin-left:15px;
+	margin-top:5px;
+	font-size:25px;
+}
+
+.item_username{
+	margin-left:15px;
+	margin-top:8px;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+.item_date{
+	font-size:10px;
+	float:right;
+	margin-right: 20px;
+	margin-top: -20px;
+}
+
+
+#edits{
+	width: 80%;
+	margin: 25px auto;
+
+}
+
+#btn1{
+	margin-top:20px;
+}
+
+
+#footer{
+margin-top: 10px;	
+}
